@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Finfy News</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="./style-carousel.css" type="text/css"/>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .carousel-control-prev{
+            justify-content: flex-start;
+        }
+        .carousel-control-next{
+            justify-content: flex-end;
+        }
+        .carousel-indicators{
+            position: unset;
+        }
+        .carousel-control-prev,.carousel-control-next{
+            width: min-content;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <section class="section">
+        <div class="w-layout-blockcontainer container-3 navbar w-container">
+            <div class="w-layout-grid grid-3">
+                <div id="nav_strech" class="navbar">
+                    <button class="hamburger" onclick="show();scrollJugad()">
+                        <div id="bar1" class="bar"></div>
+                        <div id="bar2" class="bar"></div>
+                        <div id="bar3" class="bar"></div>
+                    </button>
+                </div>
+                <div id="nav_strech-logo" class="nav_finfy-logo">
+                    <h5 class="heading-5">FINFY</h5>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="section-2">
+        <div class="feature-page header">
+            <div class="w-layout-blockcontainer container-4 w-container">
+                <h3 class="heading">Recent News</h3>
+            </div>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" onclick="visitPage(0)">
+    
+                    <div id="slide-1" class="news-layout">
+                        <img class="carousel-image" src="" alt="slide-1-image">
+                        <div class="content">
+                            <div class="carousel-headline"></div>
+                            <div class="carousel-preview"></div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+    
+                    <div id="slide-2" class="news-layout" onclick="visitPage(1)">
+                        <img class="carousel-image" src="" alt="slide-2-image">
+                        <div class="content">
+                            <div class="carousel-headline"></div>
+                            <div class="carousel-preview"></div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+    
+                    <div id="slide-3" class="news-layout" onclick="visitPage(2)">
+                        <img class="carousel-image" src="" alt="slide-3-image">
+                        <div class="content">
+                            <div class="carousel-headline"></div>
+                            <div class="carousel-preview"></div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+    
+                    <div id="slide-4" class="news-layout" onclick="visitPage(3)">
+                        <img class="carousel-image" src="" alt="slide-3-image">
+                        <div class="content">
+                            <div class="carousel-headline"></div>
+                            <div class="carousel-preview"></div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+    
+                    <div id="slide-5" class="news-layout" onclick="visitPage(4)">
+                        <img class="carousel-image" src="" alt="slide-3-image">
+                        <div class="content">
+                            <div class="carousel-headline"></div>
+                            <div class="carousel-preview"></div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+    
+                    <div id="slide-6" class="news-layout" onclick="visitPage(5)">
+                        <img class="carousel-image" src="" alt="slide-3-image">
+                        <div class="content">
+                            <div class="carousel-headline"></div>
+                            <div class="carousel-preview"></div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+    
+                    <div id="slide-7" class="news-layout" onclick="visitPage(6)">
+                        <img class="carousel-image" src="" alt="slide-3-image">
+                        <div class="content">
+                            <div class="carousel-headline"></div>
+                            <div class="carousel-preview"></div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+    
+                    <div id="slide-8" class="news-layout" onclick="visitPage(7)">
+                        <img class="carousel-image" src="" alt="slide-3-image">
+                        <div class="content">
+                            <div class="carousel-headline"></div>
+                            <div class="carousel-preview"></div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <script src="./news-carousel.js"></script>
+    </section>
+    <div class="navigation">
+        <nav>
+            <ul>
+                <li><a href="http://localhost:3000/">Home</a></li>
+                <li><a href="http://localhost:3000/Dashboard">Dashboard</a></li>
+                <li><a href="http://localhost:3000/Market">Market</a></li>
+                <li><a href="http://localhost:3000/Calculator">Calculator</a></li>
+                <li><a href="./index.html">News</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="section-3">
+        <div class="w-layout-blockcontainer container-5 w-container">
+            <div class="heading_more-news">
+                <h3 class="heading-2">More News</h3>
+            </div>
+            <button onclick="addNews()" class="see-more">See More</button>
+        </div>
+        <div class="w-layout-blockcontainer container-6 w-container">
+            <div class="w-layout-grid grid-2">
+                <div id="news1" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news2" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news3" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news4" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news5" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news6" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news7" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news8" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news9" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news10" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news11" class="news"><a href="#" class="fill-div"></a></div>
+                <div id="news12" class="news"><a href="#" class="fill-div"></a></div>
+            </div>
+        </div>
+        <script src="./app.js"></script>
+    </section>
+    <!-- <button onclick="scrollUp()" id="scroll-up"><a href="#" class="fill-div">Go to Top</a></button> -->
+    <div class="footer">
+        <div class="w-layout-blockcontainer container-8 w-container">
+            <div class="w-layout-grid grid-4">
+                <div id="footer_finfy" class="footer-finfy"><a
+                        href="#/home.html" class="link">FINFY</a></div>
+                        <div id="footer_grid" class="footer-cap">
+                            <div class="w-layout-grid grid-5">
+                        <div id="footer_2" class="footer-content"><a
+                                href="#" class="link-2">Privacy Policy</a></div>
+                        <div id="footer_3" class="footer-content"><a
+                                href="#" class="link-3">Terms of Service</a></div>
+                        <div id="footer_4" class="footer-content"><a
+                                href="#" class="link-4">Copyright Policy</a></div>
+                        <div id="footer_5" class="footer-content"><a
+                                href="#" class="link-5">Data Policy</a></div>
+                        <div id="footer_6" class="footer-content"><a
+                                href="#" class="link-6">Accessibility</a></div>
+                        <div id="footer_7s" class="footer-content"><a
+                                href="#" class="link-7">Help</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <div class="text">Copyright © 2024 Finfy</div>
+    </div>
+    
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script> 
+        <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.3/dist/lottie-player.js"></script>
+</body>
+
+
+</html>

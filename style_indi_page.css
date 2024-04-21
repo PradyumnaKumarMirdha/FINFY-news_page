@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  text-align: justify;
+  background: #F1F0F0;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: relative;
+  background: #F1F0F0;
+}
+
+.upper-section {
+  color: black;
+  background-color: #F1F0F0;
+  margin-top: 4.88vw;
+}
+
+.news-content-container {
+  color: black;
+  padding: 15px 15px;
+  padding-top: 35px;
+  margin-bottom: 20px;
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  margin-left: 7.5vw;
+  margin-right: 7.5vw;
+  div {
+    transition: 0.5s;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .news-content-container div:hover {
+    transform: scale(1.007);
+    transition: transform  0.5s;
+  }
+}
+
+.headline-container {
+  margin: 0px 9.2vw;
+  padding-top: 20px;
+  font-family: "Montserrat Bold";
+  font-size: 28px;
+}
+
+.news-switches {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10vw;
+  /* column-gap: 25px; */
+  margin-bottom: 20px;
+  pointer-events: visible;
+}
+
+#news-image {
+  height: 35vw;
+  width: 60vw;
+}
+
+#previous-switch,
+#next-switch {
+  width: 2.4vw;
+  height: 2.4vw;
+}
+
+#previous-switch:hover,
+#next-switch:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 1015px) {
+  .news-content-container {
+    line-height: 3;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 0.85em;
+  }
+  .news-content-container {
+    line-height: 2;
+    font-size: .8em;
+  }
+  div {
+    pointer-events: none;
+  }
+  #previous-switch,
+  #next-switch {
+    width: 3.53vw;
+    height: 3.53vw;
+  }
+}
+@media screen and (min-width: 767px) {
+  .news-content-container {
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .news-content-container {
+    line-height: 2;
+    font-size: .6rem;
+  }
+  div {
+    pointer-events: none;
+  }
+}
+@media screen and (min-width: 1441px) {
+h1 {
+  text-transform: capitalize;
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+.news-content-container {
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("..\\assets\\web-fonts\\Montserrat-Bold\\Web Fonts\\d3085f686df272f9e1a267cc69b2d24f.eot"),
+    url("..\\assets\\web-fonts\\Montserrat-Bold\\Web Fonts\\d3085f686df272f9e1a267cc69b2d24f.ttf")
+      format("truetype"),
+    url("..\\assets\\web-fonts\\Montserrat-Bold\\Web Fonts\\d3085f686df272f9e1a267cc69b2d24f.woff")
+      format("woff"),
+    url("..\\assets\\web-fonts\\Montserrat-Bold\\Web Fonts\\d3085f686df272f9e1a267cc69b2d24f.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("..\\assets\\web-fonts\\Inter\\Inter.ttf") format("truetype"),
+    url("..\\assets\\web-fonts\\Inter\\Inter.woff") format("woff"),
+    url("..\\assets\\web-fonts\\Inter\\Inter.woff2") format("woff2");
+}
+
+.wrapper {
+  height: 100%;
+  position: fixed;
+  background: black;
+}
+
+.arrow {
+  /* width: 50px;
+  height: 50px; */
+  width: 4.9vw;
+  height: 4.9vw;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    /* width: 15px;
+    height: 15px; */
+    width: 1.2vw;
+    height: 1.2vw;
+    top: 65%;
+    left: 50%;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px 2px 0 0;
+    position: absolute;
+    transform-origin: 50% 50%;
+  }
+
+  &.left::before {
+    transform: rotate(-135deg);
+    margin: -15px 0 0 -10px;
+  }
+  &.right::before {
+    transform: rotate(45deg);
+    left: 70%;
+    margin: -15px 0 0 -20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    top: 50%;
+    left: 57%;
+    border-style: solid;
+    border-color: #000;
+    position: absolute;
+    transform-origin: 50% 50%;
+  }
+
+  &.left::after {
+    /* width: 20px; */
+    width: 1.54vw;
+    height: 0;
+    border-width: 2px 0 0 0;
+    transform: translate(-14px, -1px);
+  }
+  &.right::after {
+    /* width: 20px; */
+    width: 1.54vw;
+    height: 0;
+    left: 72%;
+    border-width: 2px 0 0 0;
+    transform: translate(-26px, -1px);
+  }
+
+  &.circle {
+    background: aliceblue;
+    border-radius: 50px;
+  }
+}
+
+#previous-button:hover,
+#next-button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  &.circle {
+    background: #5b1fc4;
+  }
+  &::before,
+  &::after {
+    border-color: aliceblue;
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #351073;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5b1fc4;
+}
+
+/**/
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --glow-color: hsl(293, 80%, 51%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9em; /*1em*/
+  font-weight: 500;
+  letter-spacing: 0.4em; /*0.5em*/
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  /* animation: border-flicker 2s linear infinite; */
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  /* animation: text-flicker 3s linear infinite; */
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0; /*0.7*/
+  filter: blur(1em);
+  /* transform: translateY(120%) rotateX(95deg) scale(1, 0.35); */
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(0.5em);
+  opacity: 0;
+}
+
+.glowing-btn:hover:after {
+  opacity: 0.6;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/**/

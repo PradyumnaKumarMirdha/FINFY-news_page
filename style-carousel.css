@@ -1,0 +1,119 @@
+
+/* @media screen and (min-width:300px){
+    
+   
+} */
+.news-layout{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    background-color: #d9d9d9;
+    /* flex: 0 0 100%; */
+    flex: none;
+    width: 70vw;
+    height: 100%;
+    
+  }
+
+  .carousel-image{
+    height: 100%;
+    width: 50vw;
+    object-fit:cover
+}
+
+.content{
+    margin-top: 1vmax;
+    padding-right: 40px;
+    display: grid;
+    grid-template-rows: min-content auto;
+    height:100%;
+    row-gap: 20px;
+}
+
+.carousel-headline{
+    font-size: 2.3rem;
+    color: black;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.carousel-preview{
+    font-size: 1rem;
+}
+
+.carousel{
+    /* margin-top: 40px; */
+    height: 370px;
+}
+.carousel-inner{
+    height: 100%;
+}
+.carousel-item{
+    height: 100%;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+    padding: 50px 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+@media screen and (max-width:1015px){
+    .carousel-preview{
+        display: none;
+    }
+    .carousel-headline{
+        color: white;
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+    .news-layout{
+        position: relative;
+        background: transparent;
+    }
+    .carousel-image{
+        position: absolute;
+        width: 100%;
+    }
+    .content{
+        position: absolute;
+        row-gap: 0;
+        display:block;
+        height: min-content;
+        bottom: 1.5rem;
+        padding: 0;
+    }
+    
+}
+@media screen and (max-width:767px){
+    .carousel{
+        max-height: 350px;
+    }
+    .carousel-headline{
+        font-size: 1.5rem;
+        padding: 0 30px;
+    }
+    .carousel{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .carousel-inner{
+        border-radius: 20px;
+    }
+    .content{
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width:479px){
+    .carousel{
+        max-height: 280px;
+    }
+    .carousel-headline{
+        font-size:1.3rem;
+    }
+}
+
+/* @media screen and (max-width:299px){
+    .carousel{
+        display: none;
+    }
+} */

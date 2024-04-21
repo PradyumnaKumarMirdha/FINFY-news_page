@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual News Page</title>
+    <link rel="stylesheet" href="./style_indi_page.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <article class="_article">
+        <section class="upper-section">
+            <section class="headline-container">
+                <!-- <h1>Angel One plans to raise Rs 2,000cr to tap opportunities in fintech space</h1> -->
+            </section>
+            <section class="image-container">
+                <!-- <img src="https:\/\/bsmedia.business-standard.com\/_media\/bs\/img\/article\/2023-10\/13\/full\/1697189114-5702.jpg" alt="image of related to this news" id="news-image"> -->
+            </section>
+        </section>
+        <section class="news-content-container">
+            <!-- <div>Broking firm Angel One plans to raise Rs 2,000 crore to tap opportunities in the fintech space. The proposed fundraise could be done through a preferential issue, further public offer (FPO), or by qualified institutions placement (QIP), the company said in a filing.</div>&nbsp;
+            <div>The stockbroker plans to move beyond equity and mutual funds and will offer distribution of credit and fixed-income products. It said that these offerings would strengthen the company on its superapp and boost growth.</div>&nbsp;
+            <div>The company will now seek the approval of the shareholders for the proposed issuance through an extraordinary general meeting (EGM). The next EGM is scheduled on March 15. The stockbroker would be raising the sum in several tranches. The money will also be used for funding of the growing client funding book.</div>
+            &nbsp;
+            <div>Currently, Angel One is valued at Rs 25,722 crore.</div>&nbsp;
+            <div>The Asian Development Bank (ADB) has approved a $23 million loan to improve access to fintech education, research and innovation at the Gujarat International Finance Tec-City (GIFT City).</div>&nbsp;
+            <div>The project involves setting up of an international fintech institute (IFI) inside the GIFT City. The IFI will offer fintech training programmes aligned with industry and international standards.</div>&nbsp;
+            <div>"ADB's assistance will help strengthen the country's fintech education to ensure that digital and financial services become more efficient and accessible in the future," said Kanupriya Gupta, Economist, ADB.</div>&nbsp; -->
+        </section>
+    </article>
+    <div class="news-switches">
+        <img src="./assets/icons8-backward-96.png" alt="previous" id="previous-switch">
+        <img src="./assets/icons8-forward-96.png" alt="next" id="next-switch">
+    </div>
+    <script src="./fetch_news.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script> 
+    <script>
+        const lenis = new Lenis({
+            duration: 2.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2,-10*t)),
+            direction: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1, 
+            smoothTouch: false,
+            touchhMultiplier: 2,
+            infinite: false,
+        })
+        // lenis.on('scroll', ({ scroll, limit, velocity, direction, progress})=> {console.log({scroll, limit, velocity, direction, progress })})
+        function raf(time){
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+
+        function scrollUp() {
+            document.getElementById('nav_strech-logo').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
